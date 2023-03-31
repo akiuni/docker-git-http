@@ -1,5 +1,4 @@
-FROM debian:jessie
-MAINTAINER anyakichi@sopht.jp
+FROM debian
 
 ENV \
   GIT_GROUP="${GIT_GROUP:-www-data}"
@@ -27,4 +26,4 @@ CMD \
   service fcgiwrap start && \
   service nginx start
 
-EXPOSE 80 443
+EXPOSE 80
