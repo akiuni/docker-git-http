@@ -5,7 +5,7 @@ ENV \
 
 RUN \
   apt-get update && \
-  apt-get install -y fcgiwrap git gitweb nginx && \
+  apt-get install -y spawn-fcgi fcgiwrap git gitweb nginx && \
   rm -rf /var/lib/apt/lists/* && \
   echo "\ndaemon off;" >> /etc/nginx/nginx.conf && \
   chown -R www-data:www-data /var/lib/nginx
